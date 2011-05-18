@@ -4,3 +4,21 @@
 [submodule ".vim/bundle/commandt"]
 	path = .vim/bundle/commandt
 	url = https://github.com/vim-scripts/Command-T.git
+[submodule ".vim/bundle/snipmate"]
+	path = .vim/bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule ".vim/bundle/surround"]
+	path = .vim/bundle/surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule ".vim/bundle/yankring"]
+	path = .vim/bundle/yankring
+	url = git://github.com/vim-scripts/YankRing.vim.git
+[submodule ".vim/bundle/fugitive"]
+	path = .vim/bundle/fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule ".vim/bundle/syntastic"]
+	path = .vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule ".vim/bundle/calendar"]
+	path = .vim/bundle/calendar
+	url = git://github.com/vim-scripts/calendar.vim--Matsumoto.git

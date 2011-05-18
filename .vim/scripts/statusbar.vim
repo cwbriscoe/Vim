@@ -18,7 +18,7 @@ set statusline+=%r      "read only flag
 set statusline+=%m      "modified flag
 
 " display current git branch
-" set statusline+=%{fugitive#statusline()}
+set statusline+=%{fugitive#statusline()}
 
 "display a warning if &et is wrong, or we have mixed-indenting
 set statusline+=%#error#
@@ -28,7 +28,7 @@ set statusline+=%*
 set statusline+=%{StatuslineTrailingSpaceWarning()}
 
 set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 "display a warning if &paste is set
