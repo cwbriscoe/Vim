@@ -3,8 +3,10 @@ version 6.0
 " setup runpaths for environments
 if has ("unix")
     set runtimepath=~/.vimfiles/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
+    let $VIMPATH="~/.vimfiles/.vim"
 elseif has("win32")
-    set runtimepath=$HOME/vim/.vim,$VIMRUNTIME
+    set runtimepath=$HOME/Vimfiles/.vim,$VIMRUNTIME
+    let $VIMPATH="$HOME/Vimfiles/.vim"
 endif
 
 " setup pathogen to load plugin bundles
@@ -82,7 +84,7 @@ set smartindent
 
 " Show whitespace toggle
 nmap <silent> <leader>l :set list!<CR> " Shortcut to rapidly toggle set list
-set listchars=tab:▸\ ,eol:¬ " Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:?\ ,eol:� " Use the same symbols as TextMate for tabstops and EOLs
 
 " Windows overrides
 if has("win32")
@@ -111,5 +113,5 @@ endif
 colorscheme tango
 
 " Load scripts
-so ~/.vim/scripts/statusbar.vim
+so $VIMPATH/scripts/statusbar.vim
 
