@@ -2,11 +2,11 @@ version 6.0
 
 " setup runpaths for environments
 if has ("unix")
-    set runtimepath=~/.vimfiles/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
     let $VIMPATH="~/.vimfiles/.vim"
+    set runtimepath=$VIMPATH,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 elseif has("win32")
-    set runtimepath=$HOME/Vimfiles/.vim,$VIMRUNTIME
     let $VIMPATH="$HOME/Vimfiles/.vim"
+    set runtimepath=$VIMPATH,$VIMRUNTIME
 endif
 
 " setup pathogen to load plugin bundles
@@ -38,6 +38,9 @@ unlet s:cpo_save
     nnoremap ; :
     inoremap jj <ESC>
 " }           
+
+" EasyMotion mappings
+let g:EasyMotion_leader_key = '<Leader>m'
 
 " Disable arrow keys to force myself to learn the Vim way
 map <up> <nop>
@@ -113,6 +116,8 @@ endif
 
 " Color scheme
 set t_Co=256
+" set t_Co=88
+" set t_Co=16
 colorscheme _jellybeans
 
 " Load scripts
