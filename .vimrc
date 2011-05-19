@@ -111,7 +111,9 @@ endif
                                " (cleaner than default)
 " }
 
-colorscheme tango
+" Color scheme
+set t_Co=256
+colorscheme _jellybeans
 
 " Load scripts
 so $VIMPATH/scripts/statusbar.vim
