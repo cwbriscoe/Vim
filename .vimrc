@@ -50,8 +50,9 @@ imap <left> <nop>
 imap <right> <nop>
 
 syntax on
-set hidden
 set nocompatible
+set hidden
+set autoread
 set showmatch
 set vb t_vb=
 set incsearch
@@ -73,7 +74,7 @@ set termencoding=utf-8
 set window=33
 
 " GUI settings
-set guioptions-=T "remove toolbar
+set guioptions-=T " remove toolbar
 set guioptions+=m " enables menubar
 set guifont=DejaVu\ Sans\ Mono\ Bold\ 16
 
