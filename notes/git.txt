@@ -1,0 +1,8 @@
+# Create a patch
+git format-patch master --stdout > patch
+
+# Apply a patch
+git apply --stat patch
+git apply --check patch
+git am --signoff < patch
+

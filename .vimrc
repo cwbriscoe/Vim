@@ -40,7 +40,7 @@ unlet s:cpo_save
 " }           
 
 " EasyMotion mappings
-let g:EasyMotion_leader_key = '<Leader>m'
+let g:EasyMotion_leader_key = '<Leader>,'
 
 " Disable arrow keys to force myself to learn the Vim way
 map <up> <nop>
