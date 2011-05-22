@@ -1,6 +1,7 @@
 # Package Specific#
 *.VimballRecord
 *.netrwhist
+.vim/bundle/eclim*
 
 # Compiled source #
 ###################

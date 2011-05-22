@@ -58,7 +58,6 @@ set hidden
 set autoread
 set showmatch
 set vb t_vb=
-set incsearch
 set ruler
 set nomodeline
 " set virtualedit=all
@@ -85,6 +84,14 @@ set guifont=DejaVu\ Sans\ Mono\ Bold\ 16
 set ts=4 sts=4 sw=4 expandtab
 set autoindent
 set smartindent
+
+" Search Settings
+set incsearch
+set hlsearch
+
+" Enable filetype plugin
+filetype plugin on
+filetype indent on
 
 " Show whitespace toggle
 nmap <silent> <leader>l :set list!<CR> " Shortcut to rapidly toggle set list
