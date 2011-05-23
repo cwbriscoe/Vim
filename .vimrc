@@ -97,6 +97,12 @@ filetype indent on
 nmap <silent> <leader>l :set list!<CR> " Shortcut to rapidly toggle set list
 set listchars=tab:?\ ,eol:¬ " Use the same symbols as TextMate for tabstops and EOLs
 
+" If you prefer the Omni-Completion tip window to close when a selection is
+" made, these lines close it on movement in insert mode or when leaving
+" insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 " Windows overrides
 if has("win32")
     let winhelpfile='windows.hlp'
