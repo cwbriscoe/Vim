@@ -6,3 +6,9 @@ git apply --stat patch
 git apply --check patch
 git am --signoff < patch
 
+# Throw away local changes and recheck out from origin
+git checkout master -f
+git pull
+# or
+git reset --hard HEAD
+git pull
