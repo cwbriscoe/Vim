@@ -32,3 +32,6 @@
 [submodule ".vim/bundle/rails"]
 	path = .vim/bundle/rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule ".vim/bundle/cppcheck"]
+	path = .vim/bundle/cppcheck
+	url = https://github.com/vim-scripts/Cppcheck-compiler.git
