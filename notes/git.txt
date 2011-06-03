@@ -12,3 +12,9 @@ git pull
 # or
 git reset --hard HEAD
 git pull
+
+# Delete a submodule
+Delete the relevant line from the .gitmodules file.
+Delete the relevant section from .git/config.
+git rm --cached path_to_submodule (no trailing slash).
+Commit and delete the now untracked submodule files.
