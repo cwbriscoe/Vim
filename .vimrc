@@ -81,7 +81,7 @@ set guioptions+=m " enables menubar
 set guifont=DejaVu\ Sans\ Mono\ Bold\ 16
 
 " Tab/Indent settings
-set ts=4 sts=4 sw=4 expandtab
+set ts=2 sts=2 sw=2 expandtab
 set autoindent
 set smartindent
 
