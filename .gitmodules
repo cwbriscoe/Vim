@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/cppcheck"]
 	path = .vim/bundle/cppcheck
 	url = https://github.com/vim-scripts/Cppcheck-compiler.git
+[submodule ".vim/bundle/clangcomplete"]
+	path = .vim/bundle/clangcomplete
+	url = https://github.com/Rip-Rip/clang_complete.git
