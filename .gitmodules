@@ -1,10 +1,6 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/commandt"]
-	path = .vim/bundle/commandt
-	url = https://github.com/vim-scripts/Command-T.git
-    ignore = dirty
 [submodule ".vim/bundle/snipmate"]
 	path = .vim/bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
@@ -29,9 +25,6 @@
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule ".vim/bundle/rails"]
-	path = .vim/bundle/rails
-	url = https://github.com/tpope/vim-rails.git
 [submodule ".vim/bundle/cppcheck"]
 	path = .vim/bundle/cppcheck
 	url = https://github.com/vim-scripts/Cppcheck-compiler.git

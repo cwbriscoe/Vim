@@ -29,6 +29,7 @@ unlet s:cpo_save
     nmap <silent> <Leader>t :NERDTreeToggle<RETURN>
     nmap <silent> <Leader>f :CommandT<CR>
     nmap <silent> <Leader>b :CommandTBuffer<CR>
+    map <F5> :YRShow<CR>
     map <F9> :tabnext<CR>
     map <S-F9> :tabprev<CR>
     map th :tabprev<CR>
@@ -84,6 +85,7 @@ set guifont=DejaVu\ Sans\ Mono\ Bold\ 16
 set ts=2 sts=2 sw=2 expandtab
 set autoindent
 set smartindent
+set colorcolumn=80
 
 " Search Settings
 set incsearch
