@@ -43,6 +43,13 @@ unlet s:cpo_save
 " EasyMotion mappings
 let g:EasyMotion_leader_key = '<Leader>,'
 
+" Supertab and Clang Autocomplete settings
+set completeopt=menu,menuone,longest
+set pumheight=15
+let g:SuperTabDefaultCompletionType="context"
+let g:clang_complete_auto=0
+let g:clang_complete_copen=1
+
 " Disable arrow keys to force myself to learn the Vim way
 map <up> <nop>
 map <down> <nop>
