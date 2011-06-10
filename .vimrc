@@ -47,8 +47,10 @@ let g:EasyMotion_leader_key = '<Leader>,'
 set completeopt=menu,menuone,longest
 set pumheight=15
 let g:SuperTabDefaultCompletionType="context"
-let g:clang_complete_auto=0
 let g:clang_complete_copen=1
+let g:clang_periodic_quickfix=1
+let g:clang_snippets=1
+let g:clang_use_library=1
 
 " Disable arrow keys to force myself to learn the Vim way
 map <up> <nop>
