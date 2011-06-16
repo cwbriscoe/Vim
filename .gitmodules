@@ -28,3 +28,9 @@
 [submodule ".vim/bundle/clangcomplete"]
 	path = .vim/bundle/clangcomplete
 	url = https://github.com/Rip-Rip/clang_complete.git
+[submodule ".vim/bundle/fuzzyfinder"]
+	path = .vim/bundle/fuzzyfinder
+	url = https://github.com/wesbaker/FuzzyFinder.git
+[submodule ".vim/bundle/l9"]
+	path = .vim/bundle/l9
+	url = https://github.com/vim-scripts/L9.git

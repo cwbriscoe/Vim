@@ -27,7 +27,7 @@ unlet s:cpo_save
 " Mappings { 
     let mapleader = ","
     nmap <silent> <Leader>t :NERDTreeToggle<RETURN>
-    nmap <silent> <Leader>f :CommandT<CR>
+    nmap <silent> <Leader>f :FufCoverageFile<CR>
     nmap <silent> <Leader>b :CommandTBuffer<CR>
     map <F5> :YRShow<CR>
     map <F9> :tabnext<CR>
@@ -107,6 +107,10 @@ filetype indent on
 " Show whitespace toggle
 nmap <silent> <leader>l :set list!<CR> " Shortcut to rapidly toggle set list
 set listchars=tab:?\ ,eol:¬ " Use the same symbols as TextMate for tabstops and EOLs
+
+" Backup settings
+set nobackup
+set nowritebackup
 
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
