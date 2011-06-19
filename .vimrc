@@ -28,7 +28,6 @@ unlet s:cpo_save
     let mapleader = ","
     nmap <silent> <Leader>t :NERDTreeToggle<RETURN>
     nmap <silent> <Leader>f :FufCoverageFile<CR>
-    nmap <silent> <Leader>b :CommandTBuffer<CR>
     map <F5> :YRShow<CR>
     map <F9> :tabnext<CR>
     map <S-F9> :tabprev<CR>
@@ -36,6 +35,10 @@ unlet s:cpo_save
     map tl :tabnext<CR>
     map tn :tabnew<CR>
     map td :tabclose<CR>
+    map <C-J> <C-W>j<C-W>
+    map <C-K> <C-W>k<C-W>
+    map <C-H> <C-W>h<C-W>
+    map <C-L> <C-W>l<C-W>
     nnoremap ; :
     inoremap jj <ESC>
 " }           
@@ -43,12 +46,15 @@ unlet s:cpo_save
 " EasyMotion mappings
 let g:EasyMotion_leader_key = '<Leader>,'
 
+" Yankring settings
+let g:yankring_enabled=0
+
 " Supertab and Clang Autocomplete settings
 set completeopt=menu,menuone,longest
 set pumheight=15
 let g:SuperTabDefaultCompletionType="context"
 let g:clang_complete_copen=1
-let g:clang_periodic_quickfix=1
+" let g:clang_periodic_quickfix=1
 let g:clang_snippets=1
 let g:clang_use_library=1
 
@@ -89,6 +95,7 @@ set printoptions=paper:letter
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set termencoding=utf-8
 set window=33
+set wmh=0
 
 " GUI settings
 set guioptions-=T " remove toolbar

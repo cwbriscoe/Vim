@@ -28,9 +28,13 @@
 [submodule ".vim/bundle/clangcomplete"]
 	path = .vim/bundle/clangcomplete
 	url = https://github.com/Rip-Rip/clang_complete.git
+  ignore = untracked
 [submodule ".vim/bundle/fuzzyfinder"]
 	path = .vim/bundle/fuzzyfinder
 	url = https://github.com/wesbaker/FuzzyFinder.git
 [submodule ".vim/bundle/l9"]
 	path = .vim/bundle/l9
 	url = https://github.com/vim-scripts/L9.git
+[submodule ".vim/bundle/easygrep"]
+	path = .vim/bundle/easygrep
+	url = https://github.com/gmccreight/vim-easygrep.git
