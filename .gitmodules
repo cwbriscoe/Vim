@@ -10,9 +10,6 @@
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/bundle/syntastic"]
-	path = .vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
 [submodule ".vim/bundle/calendar"]
 	path = .vim/bundle/calendar
 	url = https://github.com/vim-scripts/calendar.vim--Matsumoto.git
@@ -22,9 +19,6 @@
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule ".vim/bundle/cppcheck"]
-	path = .vim/bundle/cppcheck
-	url = https://github.com/vim-scripts/Cppcheck-compiler.git
 [submodule ".vim/bundle/clangcomplete"]
 	path = .vim/bundle/clangcomplete
 	url = https://github.com/Rip-Rip/clang_complete.git
