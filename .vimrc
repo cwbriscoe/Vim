@@ -142,8 +142,8 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " Autoadjust quickfix window to fit contents or maximum of 8 lines
 " and a minimum of 1 lines
 au FileType qf call AdjustWindowHeight(1, 8)
-function! AdjustWindowHeight(minheight, maxheight)
-  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
+function! AdjustWindowHeight(min, maxheight)
+  exe max([min([line("$"), a:max]), a:minheight]) . "wincmd _"
 endfunction
 
 " Windows overrides
