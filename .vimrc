@@ -27,8 +27,7 @@ unlet s:cpo_save
 " Mappings { 
     let mapleader = ","
     nmap <silent> <Leader>t :NERDTreeToggle<RETURN>
-    nmap <silent> <Leader>f :CommandT<CR>
-    nmap <silent> <Leader>b :CommandTBuffer<CR>
+    nmap <silent> <Leader>f :FufCoverageFile<CR>
     map <F5> :YRShow<CR>
     map <F9> :tabnext<CR>
     map <S-F9> :tabprev<CR>
@@ -36,12 +35,19 @@ unlet s:cpo_save
     map tl :tabnext<CR>
     map tn :tabnew<CR>
     map td :tabclose<CR>
+    map <C-J> <C-W>j<C-W>
+    map <C-K> <C-W>k<C-W>
+    map <C-H> <C-W>h<C-W>
+    map <C-L> <C-W>l<C-W>
     nnoremap ; :
     inoremap jj <ESC>
 " }           
 
 " EasyMotion mappings
 let g:EasyMotion_leader_key = '<Leader>,'
+
+" Yankring settings
+let g:yankring_enabled=0
 
 " Supertab and Clang Autocomplete settings
 set completeopt=menu,menuone,longest
@@ -51,6 +57,11 @@ let g:clang_complete_copen=1
 let g:clang_periodic_quickfix=1
 let g:clang_snippets=1
 let g:clang_use_library=1
+
+" NERDTree settings
+let g:NERDTreeWinPos="right"
+let NERDTreeShowFiles=1
+let NERDTreeShowHidden=1
 
 " Disable arrow keys to force myself to learn the Vim way
 map <up> <nop>
@@ -84,10 +95,15 @@ set printoptions=paper:letter
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set termencoding=utf-8
 set window=33
+set wmh=0
 
 " GUI settings
 set guioptions-=T " remove toolbar
 set guioptions+=m " enables menubar
+set guioptions-=r	" right scrollbar
+set guioptions-=R " right scrollbar split
+set guioptions-=l " left scrollbar
+set guioptions-=L " left scrollbar split
 set guifont=DejaVu\ Sans\ Mono\ Bold\ 16
 
 " Tab/Indent settings
@@ -108,11 +124,27 @@ filetype indent on
 nmap <silent> <leader>l :set list!<CR> " Shortcut to rapidly toggle set list
 set listchars=tab:?\ ,eol:¬ " Use the same symbols as TextMate for tabstops and EOLs
 
+" Backup settings
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Sound settings
+set noerrorbells
+set novisualbell
+
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
 " insert mode
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" Autoadjust quickfix window to fit contents or maximum of 8 lines
+" and a minimum of 1 lines
+au FileType qf call AdjustWindowHeight(1, 8)
+function! AdjustWindowHeight(minheight, maxheight)
+  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
+endfunction
 
 " Windows overrides
 if has("win32")
