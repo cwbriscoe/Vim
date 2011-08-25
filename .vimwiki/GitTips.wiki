@@ -1,20 +1,24 @@
-# Create a patch
+= Create a patch =
 git format-patch master --stdout > patch
 
-# Apply a patch
+= Apply a patch =
 git apply --stat patch
 git apply --check patch
 git am --signoff < patch
 
-# Throw away local changes and recheck out from origin
+= Throw away local changes and recheck out from origin =
 git checkout master -f
 git pull
 # or
 git reset --hard HEAD
 git pull
 
-# Delete a submodule
+= Delete a submodule =
 Delete the relevant line from the .gitmodules file.
 Delete the relevant section from .git/config.
 git rm --cached path_to_submodule (no trailing slash).
 Commit and delete the now untracked submodule files.
+
+= Update a submodule to latest source =
+CD to submodule directory and do:
+git pull

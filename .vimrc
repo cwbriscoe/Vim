@@ -2,9 +2,11 @@ version 6.0
 
 " setup runpaths for environments
 if has ("unix")
+    let $GITBASE="~/.vimfiles"
     let $VIMPATH="~/.vimfiles/.vim"
     set runtimepath=$VIMPATH,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 elseif has("win32")
+    let $GITBASE="$HOME/Vimfiles"
     let $VIMPATH="$HOME/Vimfiles/.vim"
     set runtimepath=$VIMPATH,$VIMRUNTIME
 endif
@@ -145,6 +147,10 @@ au FileType qf call AdjustWindowHeight(1, 8)
 function! AdjustWindowHeight(min, maxheight)
   exe max([min([line("$"), a:max]), a:minheight]) . "wincmd _"
 endfunction
+
+" Vimwiki
+let g:vimwiki_list = [{'path': '$GITBASE/.vimwiki/',
+                     \ 'path_html': '$GITBASE/.vimwiki_html/'}]
 
 " Windows overrides
 if has("win32")

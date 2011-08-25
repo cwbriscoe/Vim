@@ -1,0 +1,7 @@
+==== Briscoe Wiki ====
+
+= Tips =
+  * VimTips -- Vim tips
+  * GitTips -- Git tips
+
+
