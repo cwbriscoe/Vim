@@ -3,5 +3,5 @@
 = Tips =
   * VimTips -- Vim tips
   * GitTips -- Git tips
-
+  * VimWiki -- Vimwiki tips
 

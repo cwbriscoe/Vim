@@ -1,0 +1,8 @@
+CamelCase - two capitals in a word (hit enter on it to make a new page link)
+*bold text*
+_italic text_
+~~strikeout text~~
+`code (no syntax) text`
+super^script^
+sub,,script,,
+
