@@ -1,0 +1,7 @@
+=== Moving Current Line Around ===
+zt - change view so current line is on top
+zb - change view so current line is on bottom
+zz - change view so current line is centered
+
+=== Window quit/save/close operations ===
+ZZ - save and quit

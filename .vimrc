@@ -61,7 +61,7 @@ let g:clang_snippets=1
 let g:clang_use_library=1
 
 " NERDTree settings
-let g:NERDTreeWinPos="right"
+let g:NERDTreeWinPos="left"
 let NERDTreeShowFiles=1
 let NERDTreeShowHidden=1
 
@@ -154,9 +154,10 @@ let g:vimwiki_list = [{'path': '$GITBASE/.vimwiki/',
 
 " Windows overrides
 if has("win32")
-    let winhelpfile='windows.hlp'
-    map K :execute "!start winhlp32 -k <cword> " . winhelpfile <CR>
-    set guifont=Consolas:h14:b:cANSI
+  let winhelpfile='windows.hlp'
+  map K :execute "!start winhlp32 -k <cword> " . winhelpfile <CR>
+  set guifont=Consolas:h14:b:cANSI
+  map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 
 endif
 
 " Folding {
