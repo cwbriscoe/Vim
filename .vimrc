@@ -115,6 +115,8 @@ set colorcolumn=80
 " Search Settings
 set incsearch
 set hlsearch
+nnoremap n nzz
+nnoremap N Nzz
 
 " Enable filetype plugin
 filetype plugin on
