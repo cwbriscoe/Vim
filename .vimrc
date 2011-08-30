@@ -2,9 +2,11 @@ version 6.0
 
 " setup runpaths for environments
 if has ("unix")
+    let $GITBASE="~/.vimfiles"
     let $VIMPATH="~/.vimfiles/.vim"
     set runtimepath=$VIMPATH,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 elseif has("win32")
+    let $GITBASE="$HOME/Vimfiles"
     let $VIMPATH="$HOME/Vimfiles/.vim"
     set runtimepath=$VIMPATH,$VIMRUNTIME
 endif
@@ -59,7 +61,7 @@ let g:clang_snippets=1
 let g:clang_use_library=1
 
 " NERDTree settings
-let g:NERDTreeWinPos="right"
+let g:NERDTreeWinPos="left"
 let NERDTreeShowFiles=1
 let NERDTreeShowHidden=1
 
@@ -144,15 +146,20 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " Autoadjust quickfix window to fit contents or maximum of 8 lines
 " and a minimum of 1 lines
 au FileType qf call AdjustWindowHeight(1, 8)
-function! AdjustWindowHeight(minheight, maxheight)
-  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
+function! AdjustWindowHeight(min, maxheight)
+  exe max([min([line("$"), a:max]), a:minheight]) . "wincmd _"
 endfunction
+
+" Vimwiki
+let g:vimwiki_list = [{'path': '$GITBASE/.vimwiki/',
+                     \ 'path_html': '$GITBASE/.vimwiki_html/'}]
 
 " Windows overrides
 if has("win32")
-    let winhelpfile='windows.hlp'
-    map K :execute "!start winhlp32 -k <cword> " . winhelpfile <CR>
-    set guifont=Consolas:h14:b:cANSI
+  let winhelpfile='windows.hlp'
+  map K :execute "!start winhlp32 -k <cword> " . winhelpfile <CR>
+  set guifont=Consolas:h14:b:cANSI
+  map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR> 
 endif
 
 " Folding {

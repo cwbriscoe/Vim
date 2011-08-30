@@ -13,6 +13,7 @@
 [submodule ".vim/bundle/calendar"]
 	path = .vim/bundle/calendar
 	url = https://github.com/vim-scripts/calendar.vim--Matsumoto.git
+  ignore = untracked
 [submodule ".vim/bundle/easymotion"]
 	path = .vim/bundle/easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
@@ -32,3 +33,7 @@
 [submodule ".vim/bundle/easygrep"]
 	path = .vim/bundle/easygrep
 	url = https://github.com/gmccreight/vim-easygrep.git
+[submodule ".vim/bundle/vimwiki"]
+	path = .vim/bundle/vimwiki
+	url = https://github.com/vim-scripts/vimwiki.git
+  ignore = untracked
