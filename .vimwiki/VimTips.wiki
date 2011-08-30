@@ -5,3 +5,7 @@ zz - change view so current line is centered
 
 === Window quit/save/close operations ===
 ZZ - save and quit
+
+=== Code Folding ===
+ZO - Open fold
+ZC - Close fold
