@@ -2,12 +2,14 @@ version 6.0
 
 " setup runpaths for environments
 if has ("unix")
-    let $GITBASE="~/.vimfiles"
     let $VIMPATH="~/.vimfiles/.vim"
+    let g:vimwiki_list = [{'path': '~/.vimfiles/.vimwiki/',
+                         \ 'path_html': '~/.vimfiles/.vimwiki_html/'}]
     set runtimepath=$VIMPATH,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 elseif has("win32")
-    let $GITBASE="$HOME/Vimfiles"
     let $VIMPATH="$HOME/Vimfiles/.vim"
+    let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/',
+                         \ 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
     set runtimepath=$VIMPATH,$VIMRUNTIME
 endif
 
@@ -117,6 +119,8 @@ set colorcolumn=80
 " Search Settings
 set incsearch
 set hlsearch
+nnoremap n nzz
+nnoremap N Nzz
 
 " Enable filetype plugin
 filetype plugin on
@@ -147,10 +151,6 @@ au FileType qf call AdjustWindowHeight(1, 8)
 function! AdjustWindowHeight(min, maxheight)
   exe max([min([line("$"), a:max]), a:minheight]) . "wincmd _"
 endfunction
-
-" Vimwiki
-let g:vimwiki_list = [{'path': '$GITBASE/.vimwiki/',
-                     \ 'path_html': '$GITBASE/.vimwiki_html/'}]
 
 " Windows overrides
 if has("win32")
