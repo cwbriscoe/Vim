@@ -1,3 +1,6 @@
+=== Plugin Commands ===
+:Calendar - opens the calendar
+
 === Moving Current Line Around ===
 zt - change view so current line is on top
 zb - change view so current line is on bottom
