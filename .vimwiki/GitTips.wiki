@@ -22,3 +22,9 @@ Commit and delete the now untracked submodule files.
 = Update a submodule to latest source =
 CD to submodule directory and do:
 git pull
+
+= Short status output =
+git status -sb
+
+= Show branches and tags in git log =
+git log --oneline --decorate
