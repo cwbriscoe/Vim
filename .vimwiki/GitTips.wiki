@@ -21,7 +21,10 @@ Commit and delete the now untracked submodule files.
 
 = Update a submodule to latest source =
 CD to submodule directory and do:
-git pull
+git pull origin master
+
+= Update *ALL* submodules to latest source =
+git submodule foreach git pull origin master
 
 = Short status output =
 git status -sb
