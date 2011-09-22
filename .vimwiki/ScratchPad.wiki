@@ -1,0 +1,3 @@
+PL     1       2       3       4       5       6       7   
+MT     M6      M5      M4      M3      M2      M1      M
+TT     11994   11995   11996   11997   11998   11999   12000 <--- tt store#, convert to 11994 on load
