@@ -1,3 +1,7 @@
+= Useful Bash aliases =
+alias gstat='git status -sb'
+alias glog='git log --oneline --decorate'
+
 = Create a patch =
 git format-patch master --stdout > patch
 
