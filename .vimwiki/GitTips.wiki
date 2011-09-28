@@ -34,4 +34,4 @@ git submodule foreach git pull origin master
 git status -sb
 
 = Show branches and tags in git log =
-git log --oneline --decorate
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative

@@ -12,3 +12,12 @@ ZZ - save and quit
 === Code Folding ===
 ZO - Open fold
 ZC - Close fold
+
+=== Selecting, changing & deleting text in parens ===
+cib - change text between parentheses.
+cab - cib plus includes parens.
+dib - cib but delete
+dab - cab but delete
+vib - cib but select
+vab - cab but select
+ci? - ci ({[", etc.  delete and select variations as well
