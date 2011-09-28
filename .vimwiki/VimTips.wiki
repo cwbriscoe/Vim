@@ -1,4 +1,5 @@
 === Plugin Commands ===
+:Helptags - pathogen command to run :helptags in all module doc directories
 :Calendar - opens the calendar
 
 === Moving Current Line Around ===
