@@ -1,0 +1,9 @@
+brian comely         unix admin
+chris mathers        infra admin (msend)
+shekhar ganji        oracle dba
+kathy long           mainframe dba
+mike johnson         federated server
+brandon mitchell     citrix
+rick mattingly       midrange
+anthony isadore      midrange
+eric carlson         trace down CD users if you give him a dns name.
