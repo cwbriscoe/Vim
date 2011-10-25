@@ -1,0 +1,4 @@
+=== Grant bind and execute authority on Federated server ===
+sign in with appropriate user, ex: jdaeii2u
+grant bind on package ceccola.iac0030 to public
+grant execute on package ceccola.iac0030 to public

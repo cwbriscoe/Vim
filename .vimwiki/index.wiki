@@ -8,6 +8,7 @@
 = Work =
   * ServerList -- List of commonly used servers
   * PeopleList -- List of various people and their major function
+  * SqlAdmin   -- Notes on Db commands used by admins
 
 ScratchPad
 
