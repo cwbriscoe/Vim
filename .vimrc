@@ -3,13 +3,17 @@ version 6.0
 " setup runpaths for environments
 if has ("unix")
     let $VIMPATH="~/.vimfiles/.vim"
-    let g:vimwiki_list = [{'path': '~/.vimfiles/.vimwiki/',
-                         \ 'path_html': '~/.vimfiles/.vimwiki_html/'}]
+    let g:vimwiki_list = [{'path': '~/.vimfiles/.vimwiki/', 'path_html': '~/.vimfiles/.vimwiki_html/'}]
     set runtimepath=$VIMPATH,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 elseif has("win32")
     let $VIMPATH="$HOME/Vimfiles/.vim"
-    let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/',
-                         \ 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
+    let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
+    set runtimepath=$VIMPATH,$VIMRUNTIME
+endif
+
+if !isdirectory($VIMPATH)
+  let $VIMPATH="/Users/Chris/Vimfiles/.vim"
+    let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
     set runtimepath=$VIMPATH,$VIMRUNTIME
 endif
 
