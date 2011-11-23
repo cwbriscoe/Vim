@@ -13,8 +13,9 @@ endif
 
 if !isdirectory($VIMPATH)
   let $VIMPATH="/Users/Chris/Vimfiles/.vim"
-    let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
-    set runtimepath=$VIMPATH,$VIMRUNTIME
+  let $HOME="/Users/Chris"
+  let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
+  set runtimepath=$VIMPATH,$VIMRUNTIME
 endif
 
 " setup pathogen to load plugin bundles
