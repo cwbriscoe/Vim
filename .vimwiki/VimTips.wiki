@@ -11,8 +11,8 @@ zz - change view so current line is centered
 ZZ - save and quit
 
 === Code Folding ===
-ZO - Open fold
-ZC - Close fold
+zo - Open fold
+zc - Close fold
 
 === Selecting, changing & deleting text in parens ===
 cib - change text between parentheses.
