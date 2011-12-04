@@ -80,6 +80,7 @@ imap <right> <nop>
 syntax on
 set nocompatible
 set hidden
+set wildmenu
 set autoread
 set showmatch
 set vb t_vb=

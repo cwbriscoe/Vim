@@ -1,0 +1,6 @@
+= Install all files needed to build a package =
+sudo apt-get build-dep xboard
+
+= ATI Driver Config from Command Line =
+sudo amdcccle
+
