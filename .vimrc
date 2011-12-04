@@ -11,12 +11,12 @@ elseif has("win32")
     set runtimepath=$VIMPATH,$VIMRUNTIME
 endif
 
-if !isdirectory($VIMPATH)
-  let $VIMPATH="/Users/Chris/Vimfiles/.vim"
-  let $HOME="/Users/Chris"
-  let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
-  set runtimepath=$VIMPATH,$VIMRUNTIME
-endif
+"if !isdirectory($VIMPATH)
+"  let $VIMPATH="/Users/Chris/Vimfiles/.vim"
+"  let $HOME="/Users/Chris"
+"  let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
+"  set runtimepath=$VIMPATH,$VIMRUNTIME
+"endif
 
 " setup pathogen to load plugin bundles
 call pathogen#runtime_append_all_bundles()
