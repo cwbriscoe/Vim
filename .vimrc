@@ -12,11 +12,10 @@ elseif has("win32")
 endif
 
 " workaround for using gvim on work machine in both win and mingw
-if (hostname() = 'OF701L3CYZ3CZ') 
-  let $VIMPATH="/Users/Chris/Vimfiles/.vim"
-  let $HOME="/Users/Chris"
-  let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
-  set runtimepath=$VIMPATH,$VIMRUNTIME
+if (match(system('uname -s'), 'MINGW') >= 0)
+    let $VIMPATH="$HOME/Vimfiles/.vim"
+    let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
+    set runtimepath=$VIMPATH,$VIMRUNTIME
 endif
 
 " setup pathogen to load plugin bundles
