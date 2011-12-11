@@ -22,3 +22,7 @@ dab - cab but delete
 vib - cib but select
 vab - cab but select
 ci? - ci ({[", etc.  delete and select variations as well
+
+=== Copy and pasting from OS clipboard ===
+"+y  - yank
+"+gp - paste

@@ -1,0 +1,4 @@
+== remove elements from vector that meet certain criteria ==
+#include <algorithm>
+myVec.erase(std:remove_if( myVec.begin(),myVec.end(), &NeedsRemoval), myVec.end());
+
