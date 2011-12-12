@@ -49,7 +49,8 @@ unlet s:cpo_save
     map <C-H> <C-W>h<C-W>
     map <C-L> <C-W>l<C-W>
     nnoremap ; :
-    inoremap jj <ESC>
+    inoremap jk <ESC>
+    inoremap kj <ESC>
 " }           
 
 " EasyMotion mappings
