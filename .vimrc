@@ -53,6 +53,13 @@ unlet s:cpo_save
     inoremap kj <ESC>
 " }           
 
+" OmniComplete setup
+if has("autocmd")
+  "autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+  "autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
+  autocmd FileType java set tags=~/android.ctags
+endif
+
 " EasyMotion mappings
 let g:EasyMotion_leader_key = '<Leader>,'
 
