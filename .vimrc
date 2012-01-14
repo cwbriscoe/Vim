@@ -33,6 +33,10 @@ map <S-Insert> <MiddleMouse>j
 let &cpo=s:cpo_save
 unlet s:cpo_save
 
+" Enable filetype plugin
+filetype plugin on
+filetype indent on
+
 " Mappings { 
     let mapleader = ","
     nmap <silent> <Leader>t :NERDTreeToggle<RETURN>
@@ -55,8 +59,8 @@ unlet s:cpo_save
 
 " OmniComplete setup
 if has("autocmd")
-  "autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-  "autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
+  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+  autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
   autocmd FileType java set tags=~/android.ctags
 endif
 
@@ -135,10 +139,6 @@ set incsearch
 set hlsearch
 nnoremap n nzz
 nnoremap N Nzz
-
-" Enable filetype plugin
-filetype plugin on
-filetype indent on
 
 " Show whitespace toggle
 nmap <silent> <leader>l :set list!<CR> " Shortcut to rapidly toggle set list
