@@ -1,4 +1,9 @@
 === Grant bind and execute authority on Federated server ===
-sign in with appropriate user, ex: jdaeii2u
-grant bind on package ceccola.iac0030 to public
-grant execute on package ceccola.iac0030 to public
+sign in with appropriate user, ex: jdaeii3u
+connect to udbfedp user jdaeii3u 
+grant bind on package ceccolp.iac0030 to public
+grant execute on package ceccolp.iac0030 to public
+
+=== Load data into a DB2 table without wiping out existing data ===
+RESUME YES
+
