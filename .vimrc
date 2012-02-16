@@ -27,7 +27,7 @@ set cpo&vim
 
 map! <S-Insert> <MiddleMouse>
 nmap gx <Plug>NetrwBrowseX
-nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
+nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
 map <S-Insert> <MiddleMouse>j
 
 let &cpo=s:cpo_save
@@ -57,12 +57,19 @@ filetype indent on
     inoremap kj <ESC>
 " }           
 
-" OmniComplete setup
-if has("autocmd")
-  autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-  autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
-  autocmd FileType java set tags=~/android.ctags
-endif
+" Eclim mappings
+" if the current file is in a Eclipse project, open project tree automatically
+" let g:EclimProjectTreeAutoOpen=1 
+let g:EclimProjectTreeExpandPathOnOpen=1
+let g:EclimProjectTreeSharedInstance=1  "share tree instance through all tabs
+nmap <silent> <Leader>i :JavaImport<cr>
+nmap <silent> <Leader>d :JavaDocSearch -x declarations<cr>
+nmap <silent> <cr>      :JavaSearchContext<cr>
+
+" FuzzyFinder Settings
+let g:fuf_coveragefile_exclude = '\v\~$' 
+\ . '|\.(o|png|PNG|JPG|class|CLASS|jpg|exe|bak|swp|jar)$' 
+\ . '|(^|[/\\])\.(hg|git|bzr)($|[/\\])' 
 
 " EasyMotion mappings
 let g:EasyMotion_leader_key = '<Leader>,'
