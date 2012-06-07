@@ -7,3 +7,7 @@ grant execute on package ceccolp.iac0030 to public
 === Load data into a DB2 table without wiping out existing data ===
 RESUME YES
 
+=== DB2 TOOLS
+TSO ADBL - db2 tools menu
+Query Monitor Command CSETUP allows you to define sort and related settings
+
