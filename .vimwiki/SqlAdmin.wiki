@@ -9,5 +9,7 @@ RESUME YES
 
 === DB2 TOOLS
 TSO ADBL - db2 tools menu
-Query Monitor Command CSETUP allows you to define sort and related settings
 
+Query Monitor Commands
+  CSETUP - allows you to define sort and related settings
+  INTV - allows you to selects intervals 
