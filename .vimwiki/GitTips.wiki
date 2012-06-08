@@ -17,6 +17,9 @@ git pull
 git reset --hard HEAD
 git pull
 
+= Add a submodule =
+git submodule add <repo> <dest>
+
 = Delete a submodule =
 Delete the relevant line from the .gitmodules file.
 Delete the relevant section from .git/config.
