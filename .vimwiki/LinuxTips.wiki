@@ -4,3 +4,5 @@ sudo apt-get build-dep xboard
 = ATI Driver Config from Command Line =
 sudo amdcccle
 
+= Manage startup services in Ubuntu =
+sudo sysv-rc-conf
