@@ -6,15 +6,21 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" set the leader key
+let mapleader = ","
+
 " setup runpaths for environments
 if has ("unix")
     let $VIMPATH="~/.vimfiles/.vim"
     let g:vimwiki_list = [{'path': '~/.vimfiles/.vimwiki/', 'path_html': '~/.vimfiles/.vimwiki_html/'}]
     set runtimepath=$VIMPATH,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
+    nmap <silent> <Leader>s :ConqueTerm bash<RETURN>
+    nmap <silent> <Leader>p :ConqueTerm python<RETURN>
 elseif has("win32")
     let $VIMPATH="$HOME/Vimfiles/.vim"
     let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
     set runtimepath=$VIMPATH,$VIMRUNTIME
+    nmap <silent> <Leader>s :ConqueTerm Powershell.exe<RETURN>
 endif
 
 " workaround for using gvim on work machine in both win and mingw
@@ -51,7 +57,6 @@ set smartindent
 set colorcolumn=80
 
 " Mappings { 
-    let mapleader = ","
     nmap <silent> <Leader>t :NERDTreeToggle<RETURN>
     nmap <silent> <Leader>f :FufCoverageFile<CR>
     map <F5> :YRShow<CR>
