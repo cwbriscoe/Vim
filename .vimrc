@@ -1,5 +1,11 @@
 version 6.0
 
+" Enable filetype plugin
+syntax on
+filetype on
+filetype plugin on
+filetype indent on
+
 " setup runpaths for environments
 if has ("unix")
     let $VIMPATH="~/.vimfiles/.vim"
@@ -18,8 +24,13 @@ if (match(system('uname -s'), 'MINGW') >= 0)
     set runtimepath=$VIMPATH,$VIMRUNTIME
 endif
 
+"python-mode override to use my tabs
+let g:pymode_options_indent = 0
+
 " setup pathogen to load plugin bundles
 call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
+call pathogen#helptags()
 
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
@@ -33,9 +44,11 @@ map <S-Insert> <MiddleMouse>j
 let &cpo=s:cpo_save
 unlet s:cpo_save
 
-" Enable filetype plugin
-filetype plugin on
-filetype indent on
+" Tab/Indent settings
+set ts=2 sts=2 sw=2 expandtab
+set autoindent
+set smartindent
+set colorcolumn=80
 
 " Mappings { 
     let mapleader = ","
@@ -91,6 +104,9 @@ let g:NERDTreeWinPos="left"
 let NERDTreeShowFiles=1
 let NERDTreeShowHidden=1
 
+" python-mode settings
+let g:pymode_lint_ignore = "E501,E111"
+
 " Disable arrow keys to force myself to learn the Vim way
 map <up> <nop>
 map <down> <nop>
@@ -101,7 +117,6 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-syntax on
 set nocompatible
 set hidden
 set wildmenu
@@ -134,12 +149,6 @@ set guioptions-=R " right scrollbar split
 set guioptions-=l " left scrollbar
 set guioptions-=L " left scrollbar split
 set guifont=DejaVu\ Sans\ Mono\ Bold\ 16
-
-" Tab/Indent settings
-set ts=2 sts=2 sw=2 expandtab
-set autoindent
-set smartindent
-set colorcolumn=80
 
 " Search Settings
 set incsearch
@@ -206,4 +215,7 @@ colorscheme _jellybeans
 
 " Load scripts
 so $VIMPATH/scripts/statusbar.vim
+
+" Setup my custom syntax files
+au BufNewFile,BufRead *.jinja2 set filetype=jinja
 
