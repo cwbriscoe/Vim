@@ -53,3 +53,4 @@
 [submodule ".vim/bundle/conque"]
 	path = .vim/bundle/conque
 	url = https://github.com/rygwdn/vim-conque.git
+  ignore = untracked
