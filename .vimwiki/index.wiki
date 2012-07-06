@@ -1,16 +1,16 @@
 ==== Briscoe Wiki ====
 
 = Tips =
-  * VimTips   -- Vim tips
-  * GitTips   -- Git tips
-  * LinuxTips -- Linux tips
-  * VimWiki   -- Vimwiki tips
-  * CPlusPlus -- C++ tips
+  * [[VimTips]]   -- Vim tips
+  * [[GitTips]]   -- Git tips
+  * [[LinuxTips]] -- Linux tips
+  * [[VimWiki]]   -- Vimwiki tips
+  * [[CPlusPlus]] -- C++ tips
 
 = Work =
-  * ServerList -- List of commonly used servers
-  * PeopleList -- List of various people and their major function
-  * SqlAdmin   -- Notes on Db commands used by admins
+  * [[ServerList]] -- List of commonly used servers
+  * [[PeopleList]] -- List of various people and their major function
+  * [[SqlAdmin]]   -- Notes on Db commands used by admins
 
 ScratchPad
 

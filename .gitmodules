@@ -46,10 +46,6 @@
 	path = .vim/bundle/conque
 	url = https://github.com/rygwdn/vim-conque.git
   ignore = untracked
-[submodule ".vim/bundle/fuzzyfinder"]
-	path = .vim/bundle/fuzzyfinder
-	url = https://github.com/vim-scripts/FuzzyFinder.git
-  ignore = untracked
 [submodule ".vim/bundle/pythonmode"]
 	path = .vim/bundle/pythonmode
 	url = https://github.com/klen/python-mode.git
