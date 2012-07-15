@@ -111,6 +111,9 @@ let NERDTreeShowHidden=1
 " python-mode settings
 let g:pymode_lint_ignore = "E501,E111"
 
+" go settings
+autocmd BufWritePre *.go :silent Fmt
+
 " Disable arrow keys to force myself to learn the Vim way
 map <up> <nop>
 map <down> <nop>

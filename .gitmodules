@@ -54,3 +54,6 @@
 	path = .vim/bundle/conque
 	url = https://github.com/rygwdn/vim-conque.git
   ignore = untracked
+[submodule ".vim/bundle/golang"]
+	path = .vim/bundle/golang
+	url = https://github.com/jnwhiteh/vim-golang.git
