@@ -1,11 +1,12 @@
 ==== Briscoe Wiki ====
 
 = Tips =
-  * [[VimTips]]   -- Vim tips
-  * [[GitTips]]   -- Git tips
-  * [[LinuxTips]] -- Linux tips
-  * [[VimWiki]]   -- Vimwiki tips
-  * [[CPlusPlus]] -- C++ tips
+  * [[VimTips]]    -- Vim tips
+  * [[GitTips]]    -- Git tips
+  * [[LinuxTips]]  -- Linux tips
+  * [[VimWiki]]    -- Vimwiki tips
+  * [[CPlusPlus]]  -- C++ tips
+  * [[Golang]]     -- golang tips
 
 = Work =
   * [[ServerList]] -- List of commonly used servers
