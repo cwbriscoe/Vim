@@ -9,3 +9,9 @@ sudo sysv-rc-conf
 
 = Completely remove a package =
 sudo apt-get --purge remove <name>
+
+= To open a root terminal =
+sudo -i
+
+= Virtual Box =
+guest property commands for setting environment variables and communicationbetween the guest and host os's: VBoxControl guestproperty
