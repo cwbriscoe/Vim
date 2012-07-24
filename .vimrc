@@ -155,7 +155,7 @@ set guioptions-=r	" right scrollbar
 set guioptions-=R " right scrollbar split
 set guioptions-=l " left scrollbar
 set guioptions-=L " left scrollbar split
-set guifont=DejaVu\ Sans\ Mono\ Bold\ 16
+set guifont=DejaVu\ Sans\ Mono\ Bold\ 14
 
 " Search Settings
 set incsearch
