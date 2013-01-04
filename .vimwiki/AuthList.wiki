@@ -1,0 +1,5 @@
+unix dsadm:kroger27 
+unix fmk:jdafmk10
+
+
+for root on unix:  sudo su -
