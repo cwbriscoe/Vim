@@ -7,9 +7,12 @@ grant execute on package ceccolp.iac0030 to public
 === Load data into a DB2 table without wiping out existing data ===
 RESUME YES
 
-=== DB2 TOOLS
+=== DB2 TOOLS ===
 TSO ADBL - db2 tools menu
 
 Query Monitor Commands
   CSETUP - allows you to define sort and related settings
   INTV - allows you to selects intervals 
+  
+=== ODBC PC FIX ===
+catalog tcpip node NDE7B1A4 remote u060dbc2.kroger.com server 50000
