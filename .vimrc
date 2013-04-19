@@ -35,6 +35,10 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
 call pathogen#helptags()
 
+"temporarily turn off some plugins
+set runtimepath-=~/.vimfiles/.vim/bundle/pythonmode
+set runtimepath-=~/.vimfiles/.vim/bundle/golang
+
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
@@ -55,11 +59,13 @@ set colorcolumn=80
 
 " Mappings { 
     nmap <silent> <Leader>t :NERDTreeToggle<RETURN>
-    nmap <silent> <Leader>f :FufCoverageFile<CR>
+    nmap <silent> <Leader>f :CtrlP<CR>
     nmap <silent> <Leader>s :ConqueTerm bash<RETURN>
     nmap <silent> <Leader>p :ConqueTerm python<RETURN>
     map <F5> :YRShow<CR>
-    map <F9> :tabnext<CR>
+    map <F5> :YRShow<CR>
+    map <F7> :cp<CR>
+    map <F8> :cn<CR>
     map <S-F9> :tabprev<CR>
     map th :tabprev<CR>
     map tl :tabnext<CR>
@@ -83,10 +89,12 @@ nmap <silent> <Leader>i :JavaImport<cr>
 nmap <silent> <Leader>d :JavaDocSearch -x declarations<cr>
 nmap <silent> <cr>      :JavaSearchContext<cr>
 
-" FuzzyFinder Settings
-let g:fuf_coveragefile_exclude = '\v\~$' 
-\ . '|\.(o|png|PNG|JPG|class|CLASS|jpg|exe|bak|swp|jar)$' 
-\ . '|(^|[/\\])\.(hg|git|bzr)($|[/\\])' 
+" CtrlP Settings
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|a|o)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 " EasyMotion mappings
 let g:EasyMotion_leader_key = '<Leader>,'
@@ -102,6 +110,8 @@ let g:clang_complete_copen=1
 let g:clang_periodic_quickfix=1
 let g:clang_snippets=1
 let g:clang_use_library=1
+" This next line can probably eventually be removed
+let g:clang_user_options='-isystem /usr/local/lib/clang/3.2/include'
 
 " NERDTree settings
 let g:NERDTreeWinPos="left"
