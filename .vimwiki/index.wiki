@@ -14,6 +14,7 @@
   * [[PeopleList]] -- List of various people and their major function
   * [[SqlAdmin]]   -- Notes on Db commands used by admins
   * [[As400]]      -- AS400 commands & notes
+  * [[CICS]]      -- CICS commands & notes
 
 [[ScratchPad]]
 

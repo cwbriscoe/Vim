@@ -1,0 +1,2 @@
+CEMT I TASK TRAN(*) - list all running tasks.
+CEMT S TASK(XXXX) TRAN(XXXX) purge - to kill a task.
