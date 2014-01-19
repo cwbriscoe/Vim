@@ -1,4 +1,4 @@
-version 6.0
+version 7.4
 
 " Enable filetype plugin
 syntax on
@@ -13,7 +13,7 @@ let mapleader = ","
 if has ("unix")
     let $VIMPATH="~/.vimfiles/.vim"
     let g:vimwiki_list = [{'path': '~/.vimfiles/.vimwiki/', 'path_html': '~/.vimfiles/.vimwiki_html/'}]
-    set runtimepath=$VIMPATH,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
+    set runtimepath=$VIMPATH,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 elseif has("win32")
     let $VIMPATH="$HOME/Vimfiles/.vim"
     let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
@@ -110,8 +110,9 @@ let g:clang_complete_copen=1
 let g:clang_periodic_quickfix=1
 let g:clang_snippets=1
 let g:clang_use_library=1
+let g:clang_library_path='/usr/clang_34/lib'
 " This next line can probably eventually be removed
-let g:clang_user_options='-isystem /usr/local/lib/clang/3.2/include'
+" let g:clang_user_options='-isystem /usr/clang_34/lib/clang/3.4/include'
 
 " NERDTree settings
 let g:NERDTreeWinPos="left"
