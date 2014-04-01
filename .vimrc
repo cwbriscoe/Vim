@@ -110,7 +110,7 @@ let g:clang_complete_copen=1
 let g:clang_periodic_quickfix=1
 let g:clang_snippets=1
 let g:clang_use_library=1
-let g:clang_library_path='/usr/clang_34/lib'
+let g:clang_library_path='/usr/dev/clang_34/lib'
 " This next line can probably eventually be removed
 " let g:clang_user_options='-isystem /usr/clang_34/lib/clang/3.4/include'
 
