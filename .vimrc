@@ -37,7 +37,6 @@ call pathogen#helptags()
 
 "temporarily turn off some plugins
 set runtimepath-=~/.vimfiles/.vim/bundle/pythonmode
-set runtimepath-=~/.vimfiles/.vim/bundle/golang
 
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
@@ -122,9 +121,6 @@ let NERDTreeShowHidden=1
 " python-mode settings
 let g:pymode_lint_ignore = "E501,E111"
 
-" go settings
-autocmd BufWritePre *.go :silent Fmt
-
 " Disable arrow keys to force myself to learn the Vim way
 map <up> <nop>
 map <down> <nop>
@@ -186,6 +182,10 @@ set noswapfile
 " Sound settings
 set noerrorbells
 set novisualbell
+
+" vim-go settings
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "gofmt"
 
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
