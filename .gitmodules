@@ -1,7 +1,3 @@
-[submodule ".vim/bundle/nerdtree"]
-	path = .vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-  ignore = untracked
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -13,10 +9,6 @@
 [submodule ".vim/bundle/easymotion"]
 	path = .vim/bundle/easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
-  ignore = untracked
-[submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
   ignore = untracked
 [submodule ".vim/bundle/clangcomplete"]
 	path = .vim/bundle/clangcomplete
@@ -34,10 +26,6 @@
 	path = .vim/bundle/vimwiki
 	url = https://github.com/vim-scripts/vimwiki.git
   ignore = untracked
-[submodule ".vim/bundle/pythonmode"]
-	path = .vim/bundle/pythonmode
-	url = https://github.com/klen/python-mode.git
-  ignore = untracked
 [submodule ".vim/bundle/conque"]
 	path = .vim/bundle/conque
 	url = https://github.com/rygwdn/vim-conque.git
@@ -46,3 +34,6 @@
 	path = .vim/bundle/ctrlp
 	url = https://github.com/kien/ctrlp.vim
   ignore = untracked
+[submodule ".vim/bundle/vim-go"]
+	path = .vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go
