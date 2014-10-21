@@ -40,3 +40,9 @@
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vimwiki"]
+	path = vimwiki
+	url = https://github.com/vim-scripts/vimwiki.git
