@@ -82,8 +82,8 @@ set colorcolumn=80
 " Eclim mappings
 " if the current file is in a Eclipse project, open project tree automatically
 " let g:EclimProjectTreeAutoOpen=1 
-let g:EclimProjectTreeExpandPathOnOpen=1
-let g:EclimProjectTreeSharedInstance=1  "share tree instance through all tabs
+" let g:EclimProjectTreeExpandPathOnOpen=1
+" let g:EclimProjectTreeSharedInstance=1  "share tree instance through all tabs
 nmap <silent> <Leader>i :JavaImport<cr>
 nmap <silent> <Leader>d :JavaDocSearch -x declarations<cr>
 nmap <silent> <cr>      :JavaSearchContext<cr>
@@ -217,7 +217,7 @@ endif
                   " fold manually)
     set foldopen=block,hor,mark,percent,quickfix,tag " what movements
                                                   " open folds 
-    function SimpleFoldText() " {
+    function! SimpleFoldText() " {
         return getline(v:foldstart).' '
     endfunction " }
 
