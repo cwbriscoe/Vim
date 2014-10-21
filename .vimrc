@@ -185,7 +185,7 @@ set novisualbell
 
 " vim-go settings
 let g:go_fmt_autosave = 1
-let g:go_fmt_command = "gofmt"
+let g:go_fmt_command = "goimports"
 
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
