@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿version 6.0
+=======
+version 7.4
+>>>>>>> 1585f45c42b1ae8a61f060e3206b630298ffe5f5
 
 " Enable filetype plugin
 syntax on
@@ -9,8 +13,21 @@ filetype indent on
 " set the leader key
 let mapleader = ","
 
+<<<<<<< HEAD
 let $VIMPATH="~/.vimfiles/.vim"
 set runtimepath=$VIMPATH,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
+=======
+" setup runpaths for environments
+if has ("unix")
+    let $VIMPATH="~/.vimfiles/.vim"
+    let g:vimwiki_list = [{'path': '~/.vimfiles/.vimwiki/', 'path_html': '~/.vimfiles/.vimwiki_html/'}]
+    set runtimepath=$VIMPATH,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
+elseif has("win32")
+    let $VIMPATH="$HOME/Vimfiles/.vim"
+    let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
+    set runtimepath=$VIMPATH,$VIMRUNTIME
+endif
+>>>>>>> 1585f45c42b1ae8a61f060e3206b630298ffe5f5
 
 call plug#begin('~/.vimfiles/.vim/plugged')
 Plug 'fatih/vim-go'
@@ -20,6 +37,17 @@ call plug#end()
 "python-mode override to use my tabs
 let g:pymode_options_indent = 0
 
+<<<<<<< HEAD
+=======
+" setup pathogen to load plugin bundles
+call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
+call pathogen#helptags()
+
+"temporarily turn off some plugins
+set runtimepath-=~/.vimfiles/.vim/bundle/pythonmode
+
+>>>>>>> 1585f45c42b1ae8a61f060e3206b630298ffe5f5
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
@@ -40,11 +68,13 @@ set colorcolumn=80
 
 " Mappings { 
     nmap <silent> <Leader>t :NERDTreeToggle<RETURN>
-    nmap <silent> <Leader>f :FufCoverageFile<CR>
+    nmap <silent> <Leader>f :CtrlP<CR>
     nmap <silent> <Leader>s :ConqueTerm bash<RETURN>
     nmap <silent> <Leader>p :ConqueTerm python<RETURN>
     map <F5> :YRShow<CR>
-    map <F9> :tabnext<CR>
+    map <F5> :YRShow<CR>
+    map <F7> :cp<CR>
+    map <F8> :cn<CR>
     map <S-F9> :tabprev<CR>
     map th :tabprev<CR>
     map tl :tabnext<CR>
@@ -62,16 +92,18 @@ set colorcolumn=80
 " Eclim mappings
 " if the current file is in a Eclipse project, open project tree automatically
 " let g:EclimProjectTreeAutoOpen=1 
-let g:EclimProjectTreeExpandPathOnOpen=1
-let g:EclimProjectTreeSharedInstance=1  "share tree instance through all tabs
+" let g:EclimProjectTreeExpandPathOnOpen=1
+" let g:EclimProjectTreeSharedInstance=1  "share tree instance through all tabs
 nmap <silent> <Leader>i :JavaImport<cr>
 nmap <silent> <Leader>d :JavaDocSearch -x declarations<cr>
 nmap <silent> <cr>      :JavaSearchContext<cr>
 
-" FuzzyFinder Settings
-let g:fuf_coveragefile_exclude = '\v\~$' 
-\ . '|\.(o|png|PNG|JPG|class|CLASS|jpg|exe|bak|swp|jar)$' 
-\ . '|(^|[/\\])\.(hg|git|bzr)($|[/\\])' 
+" CtrlP Settings
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|a|o)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 " EasyMotion mappings
 let g:EasyMotion_leader_key = '<Leader>,'
@@ -87,6 +119,9 @@ let g:clang_complete_copen=1
 let g:clang_periodic_quickfix=1
 let g:clang_snippets=1
 let g:clang_use_library=1
+let g:clang_library_path='/usr/dev/clang_34/lib'
+" This next line can probably eventually be removed
+" let g:clang_user_options='-isystem /usr/clang_34/lib/clang/3.4/include'
 
 " NERDTree settings
 let g:NERDTreeWinPos="left"
@@ -95,9 +130,6 @@ let NERDTreeShowHidden=1
 
 " python-mode settings
 let g:pymode_lint_ignore = "E501,E111"
-
-" go settings
-autocmd BufWritePre *.go :silent Fmt
 
 " Disable arrow keys to force myself to learn the Vim way
 map <up> <nop>
@@ -161,6 +193,10 @@ set noswapfile
 set noerrorbells
 set novisualbell
 
+" vim-go settings
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
+
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
 " insert mode
@@ -191,7 +227,7 @@ endif
                   " fold manually)
     set foldopen=block,hor,mark,percent,quickfix,tag " what movements
                                                   " open folds 
-    function SimpleFoldText() " {
+    function! SimpleFoldText() " {
         return getline(v:foldstart).' '
     endfunction " }
 

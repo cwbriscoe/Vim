@@ -1,0 +1,8 @@
+KILL A TRANSACTION TASK
+  CEMT I TASK TRAN(*) - list all running tasks.
+  CEMT S TASK(XXXX) TRAN(XXXX) purge - to kill a task.
+
+KILL A USER TASK
+  CEMT I TASK(*)
+  FIND USER ID
+  S TASK(#######) FORCEPURGE
