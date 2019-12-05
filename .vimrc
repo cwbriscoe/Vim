@@ -1,4 +1,4 @@
-version 6.0
+﻿version 6.0
 
 " Enable filetype plugin
 syntax on
@@ -9,31 +9,16 @@ filetype indent on
 " set the leader key
 let mapleader = ","
 
-" setup runpaths for environments
-if has ("unix")
-    let $VIMPATH="~/.vimfiles/.vim"
-    let g:vimwiki_list = [{'path': '~/.vimfiles/.vimwiki/', 'path_html': '~/.vimfiles/.vimwiki_html/'}]
-    set runtimepath=$VIMPATH,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim73,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
-elseif has("win32")
-    let $VIMPATH="$HOME/Vimfiles/.vim"
-    let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
-    set runtimepath=$VIMPATH,$VIMRUNTIME
-endif
+let $VIMPATH="~/.vimfiles/.vim"
+set runtimepath=$VIMPATH,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 
-" workaround for using gvim on work machine in both win and mingw
-if (match(system('uname -s'), 'MINGW') >= 0)
-    let $VIMPATH="$HOME/Vimfiles/.vim"
-    let g:vimwiki_list = [{'path': '$HOME/Vimfiles/.vimwiki/', 'path_html': '$HOME/Vimfiles/.vimwiki_html/'}]
-    set runtimepath=$VIMPATH,$VIMRUNTIME
-endif
+call plug#begin('~/.vimfiles/.vim/plugged')
+Plug 'fatih/vim-go'
+Plug 'scrooloose/nerdtree'
+call plug#end()
 
 "python-mode override to use my tabs
 let g:pymode_options_indent = 0
-
-" setup pathogen to load plugin bundles
-call pathogen#runtime_append_all_bundles()
-call pathogen#infect()
-call pathogen#helptags()
 
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
@@ -165,7 +150,7 @@ nnoremap N Nzz
 
 " Show whitespace toggle
 nmap <silent> <leader>l :set list!<CR> " Shortcut to rapidly toggle set list
-set listchars=tab:?\ ,eol:� " Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:?\ ,eol:¬ " Use the same symbols as TextMate for tabstops and EOLs
 
 " Backup settings
 set nobackup
@@ -220,9 +205,5 @@ set t_Co=256
 " set t_Co=16
 colorscheme _jellybeans
 
-" Load scripts
-so $VIMPATH/scripts/statusbar.vim
-
 " Setup my custom syntax files
 au BufNewFile,BufRead *.jinja2 set filetype=jinja
-
